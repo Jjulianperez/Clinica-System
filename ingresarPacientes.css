@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+html {
+    scroll-behavior: smooth;
+}
+/* *********************/
+/* seccion I N I C I O */
+/* *********************/
+
+body {
+    background: linear-gradient( rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("captura.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+}
+
+.contenido header {
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+}
+
+.contenido header .contenido-header {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.contenido header .contenido-header h1 {
+    text-align: center;
+    color: #399ff3ea;
+}
+
+.contenido header .contenido-header nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.contenido header .contenido-header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 12px;
+    font-weight: 400;
+    transition: .5s;
+}
+
+.contenido header .contenido-header nav ul li a:hover {
+    color: #399ff3ea;
+}
+
+#icono-nav {
+    color: #fff;
+    display: none;
+}
+.tituloform{
+    text-align: center;
+}
+.formulario-clinica {
+    width: 100%;
+    max-width: 400px; /* Ajuste del ancho máximo para hacerlo más pequeño */
+    margin: 30px auto; /* Menos margen arriba y abajo */
+    padding: 15px; /* Menor padding interno */
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin-bottom: 0.5px;
+    display: block;
+    color: #333;
+}
+
+.form-input {
+    width: 100%;
+    padding: 8px; /* Disminución del padding */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 5px; /* Menor margen inferior */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px; /* Tamaño de texto reducido */
+}
+
+.form-input:focus {
+    border-color: #399ff3ea;
+    outline: none;
+    box-shadow: 0 0 5px rgba(57, 159, 243, 0.5);
+}
+
+.form-boton {
+    width: 100%;
+    padding: 10px;
+    background-color: #399ff3ea;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-boton:hover {
+    background-color: #287bb8;
+}
+
+.contenedor-turnos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    justify-content: center; 
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.375);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-turno {
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card-turno h3 {
+    color: #399ff3ea;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.card-turno p {
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.btn-cancelar {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-cancelar:hover {
+    background-color: #e60000;
+}
+
+/* Estilo para el contenedor del select */
+.form-select {
+    width: 100%; /* O ajusta según sea necesario */
+    padding: 8px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-family: 'Montserrat', sans-serif; /* Fuente */
+    font-size: 14px; /* Tamaño del texto */
+    background-color: #fff; /* Fondo blanco */
+    color: #333; /* Color del texto */
+    margin-bottom: 15px; /* Espaciado inferior */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    appearance: none; /* Elimina el estilo predeterminado */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23399FF3' d='M2 0L0 2h4z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    cursor: pointer; /* Cambia el puntero al pasar por encima */
+}
+
+/* Efecto al enfocar (focus) */
+.form-select:focus {
+    border-color: #399ff3ea; /* Color del borde al enfocar */
+    box-shadow: 0 0 5px rgba(57, 159, 243, 0.5); /* Sombra al enfocar */
+    outline: none; /* Quita el borde predeterminado */
+}
+
+/* Placeholder o primera opción */
+.form-select option:first-child {
+    color: #aaa; /* Color más claro para la opción inicial */
+}
+
+/* Estilo para opciones */
+.form-select option {
+    background-color: #fff; /* Fondo blanco */
+    color: #333; /* Texto oscuro */
+    font-size: 14px; /* Tamaño de texto */
+    font-family: 'Montserrat', sans-serif; /* Fuente consistente */
+}

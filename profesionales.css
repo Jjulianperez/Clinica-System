@@ -1,0 +1,238 @@
+/* Contenedor principal */
+.medicos-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre las cajas */
+    justify-content: center;
+    padding: 20px;
+}
+body{
+    background-image: url("captura.jpg");
+    width: 100%;
+}
+
+/* Estilo de las cajas individuales */
+.contenedor {
+    background-color: #000; /* Fondo negro */
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    text-align: center;
+    width: 250px; /* Ancho fijo */
+    transition: transform 1s ease;
+}
+
+.contenedor:hover {
+    transform: scale(1.05); /* Animación al pasar el cursor */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Imagen del médico */
+.medico-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Imagen redonda */
+    margin-bottom: 10px;
+}
+
+/* Botón de "Pedir turno" */
+button {
+    text-decoration: none;
+    display: inline-block;
+    margin: 15px 0;
+    padding: 10px 15px;
+    border: 2px solid #399ff3ea;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    background-color: transparent;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #399ff3ea;
+}
+
+/* Formulario */
+.formulario-clinica {
+    display: none;
+    position: absolute;
+    width: 300px;
+    margin: 0;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.formulario-clinica.mostrar {
+    display: grid;
+    position: fixed;
+    top: 50%;
+    left: 70%; /* Mueve el formulario a la derecha */
+    transform: translate(-50%, -55%);
+    z-index: 10;
+}
+
+.form-label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin-bottom: 0.5px;
+    display: inline-block;
+    color: #333;
+}
+
+.form-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 0.5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.form-boton {
+    width: 100%;
+    padding: 10px;
+    background-color: #399ff3ea;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-boton:hover {
+    background-color: #287bb8;
+}
+
+/* navegador */
+
+.contenido header {
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    height: 60px; /* Altura fija del navegador */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra opcional para resaltar el navegador */
+}
+
+.contenido header .contenido-header {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.contenido header .contenido-header h1 {
+    text-align: center;
+    color: #399ff3ea;
+}
+
+.contenido header .contenido-header nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.contenido header .contenido-header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 12px;
+    font-weight: 400;
+    transition: 0.5s;
+}
+
+.contenido header .contenido-header nav ul li a:hover {
+    color: #399ff3ea;
+}
+
+#icono-nav {
+    color: #fff;
+    display: none;
+}
+
+.sin-profesionales {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    text-align: center;
+    color: #333; /* Texto oscuro */
+    font-family: Arial, sans-serif;
+}
+
+.sin-profesionales p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.sin-profesionales button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sin-profesionales button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+
+/* Estilo para el contenedor del select */
+.form-select {
+    width: 100%; /* O ajusta según sea necesario */
+    padding: 8px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-family: 'Montserrat', sans-serif; /* Fuente */
+    font-size: 14px; /* Tamaño del texto */
+    background-color: #fff; /* Fondo blanco */
+    color: #333; /* Color del texto */
+    margin-bottom: 15px; /* Espaciado inferior */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    appearance: none; /* Elimina el estilo predeterminado */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23399FF3' d='M2 0L0 2h4z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    cursor: pointer; /* Cambia el puntero al pasar por encima */
+}
+
+/* Efecto al enfocar (focus) */
+.form-select:focus {
+    border-color: #399ff3ea;
+    box-shadow: 0 0 5px rgba(57, 159, 243, 0.5);
+    outline: none;
+}
+
+/* Placeholder o primera opción */
+.form-select option:first-child {
+    color: #aaa;
+}
+
+/* Estilo para opciones */
+.form-select option {
+    background-color: #fff; 
+    color: #333;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
